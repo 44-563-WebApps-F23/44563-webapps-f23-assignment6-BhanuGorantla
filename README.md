@@ -5,6 +5,6 @@ Introduction to Java Script and DOM
 
 
 # Hosted at
-[author.html](https://github.com/44-563-WebApps-F23/44563-webapps-f23-assignment6-BhanuGorantla/blob/main/author.html)
-[tips.html](https://github.com/44-563-WebApps-F23/44563-webapps-f23-assignment6-BhanuGorantla/blob/main/tips.html)
-[cruise.html](https://github.com/44-563-WebApps-F23/44563-webapps-f23-assignment6-BhanuGorantla/blob/main/cruise.html)
+[author.html](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-BhanuGorantla/author.html)
+[tips.html](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-BhanuGorantla/tips.html)
+[cruise.html](https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-BhanuGorantla/cruise.html)
