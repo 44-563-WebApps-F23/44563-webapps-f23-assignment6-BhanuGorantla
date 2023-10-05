@@ -5,12 +5,8 @@
     <title>tips</title>
 </head>
 
-
 <body>
-
     <h2>Bhanu Venkata Siva Kumar Shows tip amounts</h2>
-
-
 
     <form>
         <label for="base">Enter base amount</label>
@@ -22,18 +18,27 @@
         <input type="button" onclick="tips()" value="Show tip">
     </form>
 
-
     <p id="tip"></p>
+    <form>
+        <label>
+            <input type="radio" name="operation" value="sum" onclick="chooseOp()"> Sum
+        </label><br>
+        <label>
+            <input type="radio" name="operation" value="difference" onclick="chooseOp()"> Difference
+        </label><br>
+        <label>
+            <input type="radio" name="operation" value="product" onclick="chooseOp()"> Product
+        </label><br>
+    </form>
+
     <script>
 
         function tips() {
             var baseamt = parseFloat(document.getElementById('baseamt').value);
             var tip_percent = parseFloat(document.getElementById('tip_percent').value);
 
-
             var myOutput = '';
             var toShow = "";
-
 
             for (var i = 0; i < 5; i++) {
                 var tipPercent1 = tip_percent + i * 4
@@ -45,9 +50,49 @@
 
             document.getElementById('tip').innerHTML = 'Tips are: ' + myOutput;
         }
+        function chooseOp() {
+
+            var base = parseFloat(document.getElementById('baseamt').value);
+            var tip = parseFloat(document.getElementById('tip_percent').value);
+
+            var radioButtons = document.getElementsByName('operation');
+            console.log(radioButtons)
+
+            var operation = "";
+
+            for (var i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    operation = radioButtons[i].value;
+                    console.log(operation)
+                    break;
+                }
+            }
+
+            if (operation) {
+
+                console.log(operation)
+
+
+                var result = "";
+                switch (operation) {
+                    case "sum":
+                        result = "Sum of " + base + " and " + tip + " is " + (base + tip);
+                        break;
+                    case "difference":
+                        result = "Difference between " + base + " and " + tip + " is " + (base - tip);
+                        break;
+                    case "product":
+                        result = "Product of " + base + " and " + tip + " is " + (base * tip);
+                        break;
+                    default:
+                        result = "Invalid operation";
+                        break;
+                }
+
+                document.getElementById('checkres').innerHTML = result;
+            }
+        }
     </script>
-
-
 
 </body>
 
